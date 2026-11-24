@@ -130,63 +130,71 @@
         <p><small>Sample fixtures and prices for educational purposes only.</small></p>
     </section>
 
-    <!-- Ticket Booking Form -->
-    <section id="booking">
-        <h2>Book Your IPL Tickets</h2>
+   
+<!-- Ticket Booking Form -->
+<section id="booking">
+    <h2>Book Your IPL Tickets</h2>
 
-        <form>
-            <label for="match">Select Match:</label>
-            <select id="match" name="match">
-                <option>RCB vs CSK</option>
-                <option>RCB vs MI</option>
-                <option>MI vs KKR</option>
-            </select>
+    <form id="bookingForm">
 
-            <br><br>
+        <label for="match">Select Match:</label>
+        <select id="match" name="match">
+            <option value="RCB vs CSK">RCB vs CSK</option>
+            <option value="RCB vs MI">RCB vs MI</option>
+            <option value="MI vs KKR">MI vs KKR</option>
+        </select>
 
-            <label for="stand">Stand Category:</label>
-            <select id="stand" name="stand">
-                <option>General</option>
-                <option>Premium</option>
-                <option>VIP</option>
-            </select>
+        <br><br>
 
-            <br><br>
+        <label for="stand">Stand Category:</label>
+        <select id="stand" name="stand">
+            <option value="General">General</option>
+            <option value="Premium">Premium</option>
+            <option value="VIP">VIP</option>
+        </select>
 
-            <label for="quantity">Number of Tickets:</label>
-            <input type="number" id="quantity" name="quantity" min="1" max="10">
+        <br><br>
 
-            <br><br>
+        <label for="quantity">Number of Tickets:</label>
+        <input type="number" id="quantity" name="quantity"
+               min="1" max="10" value="1">
 
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
+        <br><br>
 
-            <br><br>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
 
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
+        <br><br>
 
-            <br><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
 
-            <label for="phone">Phone Number:</label>
-            <input type="tel" id="phone" name="phone" required>
+        <br><br>
 
-            <br><br>
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" required>
 
-            <button type="submit">Confirm Booking</button>
-        </form>
-    </section>
+        <br><br>
 
-    <!-- Booking Summary -->
-    <section id="summary">
-        <h2>Booking Summary</h2>
+        <button type="submit">Confirm Booking</button>
+    </form>
+</section>
 
-        <p>Selected Match: RCB vs CSK</p>
-        <p>Stand: General</p>
-        <p>Ticket Price: ₹800</p>
-        <p>Quantity: 1</p>
-        <h3>Total Amount: ₹800</h3>
-    </section>
+<!-- Booking Summary -->
+<section id="summary">
+    <h2>Booking Summary</h2>
+
+    <p>Selected Match: <span id="summaryMatch">RCB vs CSK</span></p>
+
+    <p>Stand: <span id="summaryStand">General</span></p>
+
+    <p>Ticket Price: ₹<span id="summaryPrice">800</span></p>
+
+    <p>Quantity: <span id="summaryQuantity">1</span></p>
+
+    <h3>Total Amount: ₹<span id="summaryTotal">800</span></h3>
+</section>
+
 
     <!-- My Bookings -->
     <section id="mybookings">
