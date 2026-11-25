@@ -1,0 +1,194 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f5f1ff;
+}
+
+/* NAVBAR */
+.navbar {
+  height: 55px;
+  background: #35165f;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 35px;
+}
+
+.navbar h2 {
+  font-size: 20px;
+}
+
+.navbar ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 25px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+/* HERO SECTION */
+.hero {
+  height: 280px;
+  background: linear-gradient(110deg, #7952c7, #e58abf);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.hero h1 {
+  font-size: 36px;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 15px;
+  margin-bottom: 25px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.hero button {
+  background: white;
+  color: #35165f;
+  border: none;
+  padding: 12px 22px;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* MATCH SECTION */
+.matches {
+  padding: 35px 20px;
+  text-align: center;
+  background: #f5f1ff;
+}
+
+.matches h2 {
+  color: #35165f;
+  font-size: 25px;
+  margin-bottom: 25px;
+}
+
+.match-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+
+/* MATCH CARDS */
+.match-card {
+  width: 250px;
+  background: white;
+  padding: 22px 18px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.13);
+  text-align: center;
+}
+
+.match-card h3 {
+  color: #35165f;
+  font-size: 20px;
+  margin-bottom: 12px;
+}
+
+.match-card p {
+  color: #555;
+  font-size: 14px;
+  margin: 8px 0;
+}
+
+.match-card button {
+  background: #6035a0;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 5px;
+  margin-top: 12px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.match-card button:hover {
+  background: #35165f;
+}
+
+/* BOOKING SECTION */
+.booking {
+  background: #e8dcff;
+  text-align: center;
+  padding: 45px 20px;
+  color: #35165f;
+}
+
+.booking h2 {
+  font-size: 25px;
+  margin-bottom: 12px;
+}
+
+.booking p {
+  font-size: 15px;
+}
+
+/* FOOTER */
+footer {
+  background: #35165f;
+  color: white;
+  text-align: center;
+  padding: 18px;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 600px) {
+  .navbar {
+    height: auto;
+    flex-direction: column;
+    gap: 15px;
+    padding: 18px;
+  }
+
+  .navbar ul {
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .hero h1 {
+    font-size: 26px;
+  }
+
+  .match-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .match-card {
+    width: 90%;
+  }
+}
