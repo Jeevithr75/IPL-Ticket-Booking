@@ -1,18 +1,17 @@
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>IPL Ticket Booking</title>
 
-    <!-- External CSS -->
     <link rel="stylesheet" href="css/styles.css">
+    <script src="js/app.js" defer></script>
 </head>
 
-<body>
+<body class="booking-body">
 
     <main class="booking-page">
 
@@ -24,13 +23,11 @@
                 Book your tickets and experience the excitement live!
             </p>
 
-            <form class="booking-form" action="#" method="get">
+            <form class="booking-form" id="booking-form">
 
                 <h2>Enter Your Booking Details</h2>
 
-                <!-- Full Name -->
                 <div class="form-group">
-
                     <label for="name">Full Name</label>
 
                     <input
@@ -42,12 +39,9 @@
                         minlength="3"
                         maxlength="30"
                     >
-
                 </div>
 
-                <!-- Email Address -->
                 <div class="form-group">
-
                     <label for="email">Email Address</label>
 
                     <input
@@ -57,12 +51,9 @@
                         placeholder="Enter your email address"
                         required
                     >
-
                 </div>
 
-                <!-- Phone Number -->
                 <div class="form-group">
-
                     <label for="phone">Phone Number</label>
 
                     <input
@@ -74,54 +65,33 @@
                         minlength="10"
                         maxlength="10"
                         pattern="[0-9]{10}"
-                        title="Please enter exactly 10 digits"
                     >
-
                 </div>
 
-                <!-- Match Selection -->
                 <div class="form-group">
-
                     <label for="match">Select Match</label>
 
                     <select id="match" name="match" required>
-
                         <option value="">-- Select a Match --</option>
-
                         <option value="CSK vs MI">CSK vs MI</option>
-
                         <option value="RCB vs KKR">RCB vs KKR</option>
-
                         <option value="MI vs RCB">MI vs RCB</option>
-
                         <option value="CSK vs KKR">CSK vs KKR</option>
-
                     </select>
-
                 </div>
 
-                <!-- Stand Category -->
                 <div class="form-group">
-
                     <label for="stand">Select Stand Category</label>
 
                     <select id="stand" name="stand" required>
-
                         <option value="">-- Select Stand --</option>
-
                         <option value="General">General</option>
-
                         <option value="Premium">Premium</option>
-
                         <option value="VIP">VIP</option>
-
                     </select>
-
                 </div>
 
-                <!-- Number of Tickets -->
                 <div class="form-group">
-
                     <label for="tickets">Number of Tickets</label>
 
                     <input
@@ -133,10 +103,8 @@
                         min="1"
                         max="10"
                     >
-
                 </div>
 
-                <!-- Additional Booking Preference -->
                 <div class="form-group">
 
                     <label>Additional Booking Preference</label>
@@ -149,7 +117,6 @@
                                 id="sms"
                                 name="preference"
                                 value="SMS"
-                                required
                             >
                             SMS Updates
                         </label>
@@ -168,7 +135,6 @@
 
                 </div>
 
-                <!-- Submit and Reset Buttons -->
                 <div class="form-buttons">
 
                     <button type="submit">
@@ -183,9 +149,42 @@
 
             </form>
 
+            <!-- Booking Summary -->
+
+            <div class="card" id="booking-summary">
+
+                <h2>Booking Summary</h2>
+
+                <p>
+                    Match:
+                    <span id="summary-match">Not selected</span>
+                </p>
+
+                <p>
+                    Stand:
+                    <span id="summary-stand">Not selected</span>
+                </p>
+
+                <p>
+                    Ticket Price:
+                    <span id="summary-price">₹0</span>
+                </p>
+
+                <p>
+                    Quantity:
+                    <span id="summary-quantity">0</span>
+                </p>
+
+                <p>
+                    Total Amount:
+                    <span id="summary-total">₹0</span>
+                </p>
+
+            </div>
+
         </div>
 
     </main>
-<script src="js/app.js"></script>
+
 </body>
 </html>
